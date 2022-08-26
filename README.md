@@ -1,8 +1,8 @@
 # Install RAPIDS, TensorFlow, and PyTorch side-by-side
 
-This installation was tested on T4 and an A10 running Ubuntu 2020.04 LTS. We used Mamba for the install as it's significantly faster than Conda. We only installed the RAPIDS components we needed, in this case `cuDF`, `cuML`, and `cuGraph`. The RAPIDS install also installed `TensorFlow`. Then `PyTorch` was installed into the RAPIDS environment. Expect the entire install process to take under 30 minutes.
+This installation was tested on a T4 and an A10 running Ubuntu 2020.04 LTS. We used Mamba for the install as it's significantly faster than Conda. We only installed the RAPIDS components we needed, in this case `cuDF`, `cuML`, and `cuGraph`. The RAPIDS install also installed `TensorFlow`. Then `PyTorch` was installed into the RAPIDS environment. Expect the entire install process to take under 30 minutes.
 
-### Install
+## Install
 
 1. [Install CUDA toolkit 11.7](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)
 
@@ -43,9 +43,9 @@ conda activate rapids-22.08
 mamba install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge
 ```
 
-### Test
+## Test
 
-Run the following hello world scripts to validate the install is running as expected.
+Run the following test scripts to validate the install is running as expected.
 
 * [cuML](scripts/hello-cuml.py)
 * [cuGraph](scripts/hello-cugraph.py)
