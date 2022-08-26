@@ -4,7 +4,7 @@ This installation was tested on a T4 and an A10 running Ubuntu 2020.04 LTS. We u
 
 ## Install
 
-1. [Install CUDA toolkit 11.7](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)
+1. [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local)
 
 ```
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
-2. [Install Conda](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
+2. [Conda](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
 
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
@@ -24,20 +24,20 @@ chmod 755 Miniconda3-py39_4.12.0-Linux-x86_64.sh
 bash Miniconda3-py39_4.12.0-Linux-x86_64.sh
 ```
 
-3. [Install Mamba](https://mamba.readthedocs.io/en/latest/installation.html)
+3. [Mamba](https://mamba.readthedocs.io/en/latest/installation.html)
 
 ```
 conda install mamba -n base -c conda-forge
 ```
 
-4. [Install RAPIDS](https://rapids.ai/start.html#get-rapids)
+4. [RAPIDS with TensorFlow](https://rapids.ai/start.html#get-rapids)
 
 ```
 mamba create -n rapids-22.08 -c rapidsai -c nvidia -c conda-forge cudf=22.08 cuml=22.08 cugraph=22.08 python=3.9 cudatoolkit=11.2 tensorflow
 conda activate rapids-22.08
 ```
 
-5. [Install PyTorch](https://pytorch.org/get-started/locally/)
+5. [PyTorch](https://pytorch.org/get-started/locally/)
 
 ```
 mamba install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge
